@@ -73,14 +73,16 @@
             color: #1e3a8a; /* deep blue for readability */
             font-size: 18px;
             line-height: 1.6;
+            font-weight: 400; /* no bold for main content */
             width: 120%;
             /* When wider than parent, pull back equally on both sides */
             margin-left: calc(-10%);
             margin-right: calc(-10%);
         }
 
-        /* Remove italics inside highlight and make it crisp */
-        .highlight-box em { font-style: normal; }
+        /* Remove italics/bold inside highlight and make it crisp */
+        .highlight-box em { font-style: normal; font-weight: 400; }
+        .highlight-box strong { font-weight: 600; }
 
         /* Bulleted look similar to the reference image */
         .highlight-box {
@@ -2025,16 +2027,16 @@
 </span>. Our experiments reveal critical insights about the current state and limitations of cross-modal reasoning capabilities in modern UMMs.
                 </p>
             <div class="highlight-box">
-                <em>Key Finding 1: Cross-modal reasoning capabilities and alignment strongly correlate with visual generation effectiveness. </em>
+                <em><strong>Key Finding 1:</strong> Cross-modal reasoning capabilities and alignment strongly correlate with visual generation effectiveness. </em>
             </div>
 
             <div class="highlight-box">
-                <em>Key Finding 2: Models capable of interleaved image-text generation demonstrate superior reasoning-dependent visual generation
+               <em><strong>Key Finding 2:</strong> Models capable of interleaved image-text generation demonstrate superior reasoning-dependent visual generation
                     performance.</em>
             </div>
 
             <div class="highlight-box">
-                <em>Key Finding 3: Current models remain severely limited in visually-augmented reasoning, showing relative strength in perception and physical modeling but weakness in logical tasks.</em>
+                <em><strong>Key Finding 3:</strong> Current models remain severely limited in visually-augmented reasoning, showing relative strength in perception and physical modeling but weakness in logical tasks.</em>
             </div>
             <br>
                 <p class="text" align="justify">
