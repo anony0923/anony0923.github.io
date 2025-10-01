@@ -101,6 +101,34 @@
             }
         }
 
+        /* Key Findings unified card styles */
+        .keyfinding-wrap {
+            max-width: 1200px;
+            width: 120%;
+            margin: 20px auto;
+            margin-left: -10%;
+            margin-right: auto;   
+        }
+        .keyfinding-card {
+            box-sizing: border-box;
+            border-left: 5px solid #b4ceee;
+            background: linear-gradient(135deg, #f1f8fc 0%, #f0f5fa 100%);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(209,189,232,0.08);
+        }
+        .keyfinding-title {
+            color: #7895b6;
+            margin: 0 0 15px 0;
+            font-weight: 700;
+            text-align: left;
+        }
+        .keyfinding-text {
+            margin: 0;
+            color: #2d3436;
+            text-align: left;
+        }
+
            /* Leaderboard Styles */
         .leaderboard-table {
             width: 140%;
@@ -2026,17 +2054,25 @@
   <span class="r1">R</span><span class="o">O</span><span class="v">V</span><span class="e">E</span><span class="r2">R</span>
 </span>. Our experiments reveal critical insights about the current state and limitations of cross-modal reasoning capabilities in modern UMMs.
                 </p>
-            <div class="highlight-box">
-                <em><strong>Key Finding 1:</strong> Cross-modal reasoning capabilities and alignment strongly correlate with visual generation effectiveness. </em>
+            <div class="keyfinding-wrap">
+              <div class="keyfinding-card">
+                <h4 class="keyfinding-title">Key Finding 1</h4>
+                <p class="keyfinding-text">Cross-modal reasoning capabilities and alignment strongly correlate with visual generation effectiveness.</p>
+              </div>
             </div>
 
-            <div class="highlight-box">
-               <em><strong>Key Finding 2:</strong> Models capable of interleaved image-text generation demonstrate superior reasoning-dependent visual generation
-                    performance.</em>
+            <div class="keyfinding-wrap">
+              <div class="keyfinding-card">
+                <h4 class="keyfinding-title">Key Finding 2</h4>
+                <p class="keyfinding-text">Unified models capable of interleaved image-text generation demonstrate superior reasoning-dependent visual generation performance.</p>
+              </div>
             </div>
 
-            <div class="highlight-box">
-                <em><strong>Key Finding 3:</strong> Current models remain severely limited in visually-augmented reasoning, showing relative strength in perception and physical modeling but weakness in logical tasks.</em>
+            <div class="keyfinding-wrap">
+              <div class="keyfinding-card">
+                <h4 class="keyfinding-title">Key Finding 3</h4>
+                <p class="keyfinding-text">Current models remain severely limited in visually-augmented reasoning, showing relative strength in perception and physical modeling but weakness in logical tasks.</p>
+              </div>
             </div>
             <br>
                 <p class="text" align="justify">
