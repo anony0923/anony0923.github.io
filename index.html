@@ -62,6 +62,43 @@
         <!-- Leaderboard Styles -->
         <style>
         
+        /* Key Findings - callout styling */
+        .highlight-box {
+            background: linear-gradient(180deg, #eef7ff 0%, #e6f2ff 100%);
+            border: 2px solid #6cb6ff;
+            border-radius: 16px;
+            padding: 18px 22px;
+            margin: 14px auto; /* centers when width <= 100% */
+            box-shadow: 0 6px 14px rgba(28, 100, 242, 0.08);
+            color: #1e3a8a; /* deep blue for readability */
+            font-size: 18px;
+            line-height: 1.6;
+            width: 120%;
+            /* When wider than parent, pull back equally on both sides */
+            margin-left: calc(-10%);
+            margin-right: calc(-10%);
+        }
+
+        /* Remove italics inside highlight and make it crisp */
+        .highlight-box em { font-style: normal; }
+
+        /* Bulleted look similar to the reference image */
+        .highlight-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .highlight-box + .highlight-box { margin-top: 16px; }
+
+        /* Mobile: keep it inside the viewport */
+        @media (max-width: 900px) {
+            .highlight-box {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
            /* Leaderboard Styles */
         .leaderboard-table {
             width: 140%;
@@ -1713,7 +1750,7 @@
                         <p class="text" align="justify">
                         <strong>Benchmark Overview:</strong>  <span class="rover-text">
                             <span class="r1">R</span><span class="o">O</span><span class="v">V</span><span class="e">E</span><span class="r2">R</span>
-                          </span> introduces the first benchmark specifically designed to evaluate reciprocal cross-modal reasoning in unified multimodal models. Unlike existing benchmarks that evaluate modalities in isolation, <span class="rover-logo">
+                          </span> introduces the first benchmark specifically designed to evaluate reciprocal cross-modal reasoning in unified multimodal models. Unlike existing benchmarks that evaluate modalities in isolation, <span class="rover-text">
                             <span class="r1">R</span><span class="o">O</span><span class="v">V</span><span class="e">E</span><span class="r2">R</span>
                           </span> requires models to use information from one modality to inform and improve outputs in another. </p>
                     <d-figure id="fig-task-demo" >
@@ -1752,7 +1789,7 @@
             <h2 class="text">Evaluation Protocol</h2>
             <p class="text" align="justify">
                 <strong>Multi-Dimensional Assessment</strong>:
-                Evaluating reciprocal cross-modal reasoning requires assessment of both reasoning steps and resulting outputs. Text-only metrics overlook visual fidelity, while image-only metrics cannot verify whether the image reflects valid reasoning. We adopt a multi-dimensional protocol that combines an automated VLM judge with expert validation on stratified samples.
+                We adopt a multi-dimensional protocol that combines an automated VLM judge - <strong>GPT-4.1</strong> with expert validation on stratified samples.
             </p>
         
             <p class="text" align="justify">
@@ -1777,7 +1814,7 @@
                 <div class="leaderboard-header">
                     <p class="text" align="justify">
                         <!-- Contact information removed for privacy. The scores in the leaderboard are the average of RV, IQ, and VC. -->
-                        The scores in the leaderboard are the average of RV, IQ, and VC.
+                        The scores in the leaderboard are the average of RV, IQ, and VC in <strong>ROVER-IG</strong>.
                     </p>
                 </div>
 
@@ -1988,11 +2025,16 @@
 </span>. Our experiments reveal critical insights about the current state and limitations of cross-modal reasoning capabilities in modern UMMs.
                 </p>
             <div class="highlight-box">
-                <em>Key Finding 1: Cross-modal reasoning capabilities strongly correlate with visual generation performance, particularly for interleaved image-text generation.</em>
+                <em>Key Finding 1: Cross-modal reasoning capabilities and alignment strongly correlate with visual generation effectiveness. </em>
             </div>
 
             <div class="highlight-box">
-                <em>Key Finding 2: Current models remain severely limited in visually-augmented reasoning, showing relative strength in perception and physical modeling but weakness in logical tasks.</em>
+                <em>Key Finding 2: Models capable of interleaved image-text generation demonstrate superior reasoning-dependent visual generation
+                    performance.</em>
+            </div>
+
+            <div class="highlight-box">
+                <em>Key Finding 3: Current models remain severely limited in visually-augmented reasoning, showing relative strength in perception and physical modeling but weakness in logical tasks.</em>
             </div>
             <br>
                 <p class="text" align="justify">
@@ -2043,7 +2085,7 @@
             <p class="text" align="justify">
                 We introduce <span class="rover-text">
   <span class="r1">R</span><span class="o">O</span><span class="v">V</span><span class="e">E</span><span class="r2">R</span>
-</span>, the first benchmark for reciprocal cross-modal reasoning, which systematically evaluates 17 unified multimodal models across 23 diverse task types in both verbal reasoning for visual generation and interleaved multimodal reasoning scenarios. Our evaluation exposes substantial performance gaps in current models and establishes that interleaved generation capabilities are strongly correlated with cross-modal reasoning effectiveness. These findings expose critical limitations in existing unified models and provide insights for advancing cross-modal reasoning capabilities in future omnimodal models. <span class="rover-logo">
+</span>, the first benchmark for reciprocal cross-modal reasoning, which systematically evaluates 17 unified multimodal models across 23 diverse task types in both verbal reasoning for visual generation and interleaved multimodal reasoning scenarios. Our evaluation exposes substantial performance gaps in current models and establishes that interleaved generation capabilities are strongly correlated with cross-modal reasoning effectiveness. These findings expose critical limitations in existing unified models and provide insights for advancing cross-modal reasoning capabilities in future omnimodal models. <span class="rover-text">
   <span class="r1">R</span><span class="o">O</span><span class="v">V</span><span class="e">E</span><span class="r2">R</span>
 </span> represents a critical step toward enabling true omnimodal generation through reciprocal cross-modal reasoning.
             </p>
