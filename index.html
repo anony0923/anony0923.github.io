@@ -999,7 +999,7 @@
                 const data = sampleData[category] && sampleData[category][item];
                 if (data) {
                     document.getElementById('data-chart').innerHTML = `
-                        <img src="${data.chart}" alt="Data Chart" style="max-width: 100%; max-height: 300px; object-fit: contain;">
+                        <img src="${data.chart}" alt="Data Chart" style="max-width: 100%; max-height: 250px; object-fit: contain;">
                         <div class="reasoning-type-label">${data.reasoning_type || 'Temporal'}</div>
                     `;
                     document.getElementById('prompt-text').textContent = data.prompt;
